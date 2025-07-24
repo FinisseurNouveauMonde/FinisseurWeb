@@ -180,135 +180,148 @@
     }
 
     .popup {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.85);
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    .popup-content {
-      background: #1a1a1a;
-      padding: 20px 30px 25px;
-      border-radius: 12px;
-      text-align: center;
-      width: 380px;
-      max-width: 90%;
-      position: relative;
-    }
-
-    .popup-content img:first-child {
-      margin-bottom: 12px;
-    }
-
-    .popup-content h3 {
-      color: #fff;
-      font-size: 20px;
-      margin-bottom: 12px;
-    }
-
-    .popup-content .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 24px;
-      background: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 12px;
-      font-weight: 900;
-      font-size: 20px;
-      text-decoration: none;
-      gap: 10px;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-
-    .popup-content .button img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .popup-content .button:hover {
-      background: #0056b3;
-    }
-
-    .popup .close {
-      position: absolute;
-      top: 8px;
-      right: 12px;
-      font-size: 24px;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      header {
-        padding: 40px 20px;
-      }
-
-      .logo-container-header img {
-        width: 80%;
-        max-width: 300px;
-        margin-bottom: 20px;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 15px;
-        margin-top: 15px;
-      }
-
-      .button-cta.bg-primary {
-        font-size: 16px;
-        padding: 12px 24px;
-      }
-
-      .videos-section {
-        padding: 80px 20px;
-      }
-
-      .video-card img {
-        height: 200px;
-      }
-
-      .video-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .popup-content {
-        width: 90%;
-        padding: 20px;
-      }
-
-      .popup-content .button {
-        font-size: 18px;
-        padding: 12px 24px;
-      }
-    }
-@media (max-width: 480px) {
-  .popup-content {
-    width: 90%;
-    max-width: 90%;
-    padding: 20px 15px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px; /* Ajouté pour éviter collage au bord sur mobile */
     box-sizing: border-box;
+  }
+
+  .popup-content {
+    background: #1a1a1a;
+    padding: 20px 30px 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 380px;
+    max-width: 90%;
+    position: relative;
     max-height: 90vh;
-    overflow-y: auto;
+    overflow-y: auto; /* Pour le scroll sur mobile */
   }
 
   .popup-content img:first-child {
-    max-width: 100%;
+    margin-bottom: 12px;
+    max-width: 100%; /* Pour éviter dépassement sur mobile */
     height: auto;
   }
-}
 
-  </style>
+  .popup-content h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .popup-content .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 20px;
+    text-decoration: none;
+    gap: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .popup-content .button img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .popup-content .button:hover {
+    background: #0056b3;
+  }
+
+  .popup .close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+      padding: 40px 20px;
+    }
+
+    .logo-container-header img {
+      width: 80%;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    nav {
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .button-cta.bg-primary {
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+
+    .videos-section {
+      padding: 80px 20px;
+    }
+
+    .video-card img {
+      height: 200px;
+    }
+
+    .video-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .popup-content {
+      width: 90%;
+      padding: 20px;
+    }
+
+    .popup-content .button {
+      font-size: 18px;
+      padding: 12px 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .popup {
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .popup-content {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 10px;
+      padding: 20px 15px;
+      box-sizing: border-box;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .popup-content img:first-child {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+</style>
 </head>
 
 <body>
