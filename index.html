@@ -26,11 +26,15 @@
       text-align: center;
     }
 
+    /* Mise à jour du style pour le logo */
     .logo-container-header img {
-      width: 100%;
-      max-width: 450px;
+      width: auto;
+      max-width: 80%; /* Ajuster pour éviter une taille trop grande sur mobile */
       height: auto;
       margin-bottom: 30px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     nav {
@@ -245,7 +249,6 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      /* Logo centré en haut */
       header {
         padding: 40px 20px;
       }
@@ -267,7 +270,6 @@
         padding: 12px 24px;
       }
 
-      /* Modifier la disposition des éléments sur mobile */
       .videos-section {
         padding: 80px 20px;
       }
@@ -297,7 +299,7 @@
 
   <header>
     <div class="logo-container-header">
-      <img src="https://i.imgur.com/3iVfZXD.png" alt="Logo" />
+      <img src="https://i.imgur.com/3iVfZXD.png" alt="Logo" loading="lazy"/>
     </div>
     <nav>
       <button class="button-cta bg-primary" onclick="showPopup()">Premium</button>
@@ -313,40 +315,46 @@
     </nav>
   </header>
 
-  <section class="videos-section">
+  <!-- Contenu de la page -->
+  <div class="videos-section">
     <div class="video-grid">
+      <!-- Exemple de vidéo, à dupliquer ou personnaliser -->
       <div class="video-card normal">
-        <img src="https://via.placeholder.com/320x180" alt="Video Thumbnail">
+        <img src="https://via.placeholder.com/300x250" alt="Thumbnail">
         <div class="video-info">
-          <div class="video-title">Titre Vidéo</div>
-          <div class="video-description">Description courte de la vidéo.</div>
+          <h3 class="video-title">Titre de la vidéo</h3>
+          <p class="video-description">Description de la vidéo.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 FinisseurWeb. Tous droits réservés.</p>
-    <p>Créé avec ❤️ pour la communauté.</p>
-  </footer>
-
-  <div class="popup" id="premiumPopup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <img src="https://i.imgur.com/3iVfZXD.png" alt="Logo">
-      <h3>Devenez Premium maintenant!</h3>
-      <p>Accédez à des fonctionnalités exclusives.</p>
-      <a href="#" class="button">S'abonner</a>
+      <!-- Ajouter plus de vidéos ici -->
     </div>
   </div>
 
+  <!-- Popup -->
+  <div class="popup" id="premiumPopup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h3>Accédez à nos fonctionnalités Premium</h3>
+      <p>Devenez un membre Premium et profitez d'avantages exclusifs !</p>
+      <a href="https://www.premiumlink.com" target="_blank" class="button">
+        <img src="https://example.com/payment-icon.png" alt="Payment Icon" />
+        Rejoindre Premium
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 FinisseurWeb. Tous droits réservés. <br><a href="/terms">Conditions d'utilisation</a></p>
+  </footer>
+
   <script>
     function showPopup() {
-      document.getElementById("premiumPopup").style.display = "flex";
+      document.getElementById('premiumPopup').style.display = 'flex';
     }
 
     function closePopup() {
-      document.getElementById("premiumPopup").style.display = "none";
+      document.getElementById('premiumPopup').style.display = 'none';
     }
   </script>
 
