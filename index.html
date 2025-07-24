@@ -179,75 +179,73 @@
       color: #e77a00;
     }
 
-    @media (max-width: 768px) {
-  .popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.85);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
 
-  .popup-content {
-    background: #1a1a1a;
-    padding: 20px 30px 25px;
-    border-radius: 12px;
-    text-align: center;
-    width: 380px;
-    max-width: 90%;
-    position: relative;
-  }
+    .popup-content {
+      background: #1a1a1a;
+      padding: 20px 30px 25px;
+      border-radius: 12px;
+      text-align: center;
+      width: 380px;
+      max-width: 90%;
+      position: relative;
+    }
 
-  .popup-content img:first-child {
-    margin-bottom: 12px;
-  }
+    .popup-content img:first-child {
+      margin-bottom: 12px;
+    }
 
-  .popup-content h3 {
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
+    .popup-content h3 {
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
 
-  .popup-content .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 24px;
-    background: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    font-weight: 900;
-    font-size: 20px;
-    text-decoration: none;
-    gap: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-  }
+    .popup-content .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 20px;
+      text-decoration: none;
+      gap: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
 
-  .popup-content .button img {
-    width: 24px;
-    height: 24px;
-  }
+    .popup-content .button img {
+      width: 24px;
+      height: 24px;
+    }
 
-  .popup-content .button:hover {
-    background: #0056b3;
-  }
+    .popup-content .button:hover {
+      background: #0056b3;
+    }
 
-  .popup .close {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-  }
-}
+    .popup .close {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
 
     /* Responsive Design */
     @media (max-width: 768px) {
@@ -306,13 +304,10 @@
     <nav>
       <button class="button-cta bg-primary" onclick="showPopup()">Premium</button>
       <a href="https://discord.com/invite/KSvDsNDmZp" target="_blank" rel="noopener" class="button-cta bg-connexion">
-        <svg aria-hidden="true" focusable="false" role="img" width="25" height="26" viewBox="0 0 25 26"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M12.5 0.0634155C5.5 0.0634155 0 5.85902 0 13C0 20.141 5.5 25.9366 12.5 25.9366C19.5 25.9366 25 20.141 25 13C25 5.85902 19.5 0.0634155 12.5 0.0634155ZM12.5 23.1144C7.4 23.1144 3 18.9518 3 13C3 7.04821 7.4 2.8856 12.5 2.8856C17.6 2.8856 22 7.04821 22 13C22 18.9518 17.6 23.1144 12.5 23.1144ZM12.5 16.1063C14.1 16.1063 15.5 14.7063 15.5 13.1063C15.5 11.5063 14.1 10.1063 12.5 10.1063C10.9 10.1063 9.5 11.5063 9.5 13.1063C9.5 14.7063 10.9 16.1063 12.5 16.1063ZM12.5 11.1063C13.3 11.1063 14 11.8063 14 12.6063C14 13.4063 13.3 14.1063 12.5 14.1063C11.7 14.1063 11 13.4063 11 12.6063C11 11.8063 11.7 11.1063 12.5 11.1063Z">
-          </path>
-        </svg>
-        Discord
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="fill: black;">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 1c4.96 0 9 4.04 9 9 0 1.42-.34 2.76-.93 3.96-1.53-1.72-3.98-2.89-7.38-3.03A3.996 3.996 0 0016 9c0-2.21-1.79-4-4-4S8 6.79 8 9c0 1.97 1.43 3.6 3.31 3.93-3.4.14-5.85 1.31-7.38 3.03C3.34 14.76 3 13.42 3 12c0-4.96 4.04-9 9-9zM9 9c0-1.65 1.35-3 3-3s3 1.35 3 3-1.35 3-3 3-3-1.35-3-3zm3 12c-3.16 0-5.94-1.64-7.55-4.12C6.01 14.93 8.61 13.9 12 13.9c3.39 0 5.99 1.03 7.55 2.98C17.94 19.36 15.16 21 12 21z"></path>
+    </svg>
+        Connnexion
       </a>
     </nav>
   </header>
